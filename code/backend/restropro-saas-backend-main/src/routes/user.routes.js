@@ -11,5 +11,9 @@ router.post("/add", isLoggedIn, isAuthenticated, isSubscriptionActive, addUser);
 router.delete("/delete/:id", isLoggedIn, isAuthenticated, isSubscriptionActive, deleteUser);
 router.post("/update/:id", isLoggedIn, isAuthenticated, isSubscriptionActive, updateUser);
 router.post("/update-password/:id", isLoggedIn, isAuthenticated, isSubscriptionActive, updateUserPassword);
+// test route
+router.get("/test", (req, res) => {
+  res.json({ message: "User test route" });
+});
 
 module.exports = router;
